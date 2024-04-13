@@ -2,17 +2,16 @@
 
 /* resetando a página*/
 * {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 1em;
+    font-size: 1em;
 }
 
-html,
 body {
   height: 100%;
   background-color: #333;
@@ -29,6 +28,7 @@ body {
   --fonte-padrao: 'Inter', sans-serif;
 }
 
+/* header styles */
 /*header*/
 .cabecalho {
   color: var(--cor2);
@@ -37,6 +37,7 @@ body {
   justify-content: space-between;
 }
 
+/* Estilos para o logotipo */
 .logo {
   color: var(--cor2);
   text-decoration: none;
@@ -54,6 +55,7 @@ body {
   color: var(--cor1);
 }
 
+/* Estilos para o menu */
 .menu {
   list-style-type: none;
   display: flex;
@@ -75,6 +77,21 @@ body {
   text-decoration: none;
 }
 
+.menu {
+    list-style-type: none;
+  }
+
+  .menu li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+
+  .menu li a {
+    color: var(--cor2);
+    text-decoration: none;
+    vertical-align: middle;
+  }
 .menu li {
   display: inline-block;
   margin-left: 20px;
@@ -86,22 +103,19 @@ body {
   vertical-align: middle;
 }
 
-
 /*Main*/
 
 /*Perfil*/
-.perfil {
-  display: flex;
-  justify-content: space-between;
-  color: var(--cor2);
-  margin-left: 40px;
-  margin-right: 40px;
+.perf h2 {
+  margin-top: 30px;
+  margin-left: 70px;
+  color: white;
 }
 
-.perfil hr {
-  margin-left: 20px;
+.perf hr {
+  margin-left: 70px;
   color: var(--cor0);
-  margin-right: 20px;
+  margin-right: 60px;
 }
 
 .imagem-texto {
@@ -115,14 +129,18 @@ body {
   width: 100%;
   max-width: 250px;
   height: auto;
-  margin-left: 20px;
+  margin-left: 70px;
 }
 
-.texto {
-  text-align: justify;
-  margin-right: 30px;
-}
+.icones {
+    display: flex;
+    align-items: center; 
+  }
 
+.texto{
+  color: var(--cor2);
+  margin-right: 40px;
+}
 .texto h3 {
   color: var(--cor0);
 }
@@ -141,30 +159,6 @@ body {
 
 .redes-sociais i:hover {
   color: var(--cor1);
-}
-
-.numero-redes {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  font-size: 24px;
-  position: relative;
-}
-
-.numero-redes i {
-  font-size: 18px;
-  margin-right: 10px;
-  left: 60px;
-}
-
-.perfil h2 {
-  margin-top: 30px;
-  margin-left: 20px;
-}
-
-.perfil hr {
-  margin-left: 20px;
-  color: var(--cor0);
 }
 
 /*Repositório*/
@@ -282,9 +276,9 @@ body {
 
 /* Adicione estas regras de mídia ao final do seu CSS */
 
+  /* Estilos para telas menores */
 /* Estilos para dispositivos com largura até 768px (tablet e dispositivos móveis) */
 @media screen and (max-width: 768px) {
-
   /*header*/
   .cabecalho {
     flex-direction: column;
@@ -296,23 +290,50 @@ body {
     margin-bottom: 20px;
   }
 
-  .logo:active {
-    color: var(--cor1);
-    /* Cor que deseja quando clicar */
-  }
-
-
   .menu ul {
     display: none;
   }
 
-  /*Main*/
+  .menu {
+    list-style-type: none;
+    margin-top: 10px;
+  }
+
+  .menu li {
+    display: block;
+    margin-left: 0;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .menu li a:hover {
+    color: var(--cor0);
+  }
 
   /*Perfil*/
-  .perfil .imagem-texto {
-    display: flex;
+  .perf h2 {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .perf hr {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .imagem-texto {
     flex-direction: column;
     align-items: center;
+  }
+
+  .imagem-texto img {
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 
   .texto {
@@ -320,34 +341,22 @@ body {
     margin-left: 0;
     margin-right: 0;
   }
-
-  .imagem-texto img {
-    margin-top: 10px;
-    width: auto;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .perfil hr {
-    width: 100%;
-    margin: 0;
-  }
-
-  .redes-sociais i:hover {
-    color: var(--cor1);
-    /* Nova cor ao passar o mouse */
+  .texto p{
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .redes-sociais {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin-top: 10px;
   }
 
+  .redes-sociais i {
+    margin: 5px;
+  }
+
   .redes-sociais i:hover {
     color: var(--cor1);
-    /* Nova cor ao passar o mouse */
   }
 
   /*Repositório*/
@@ -369,11 +378,10 @@ body {
 
   .colega h3 a:hover {
     color: var(--cor0);
-
   }
 
   /*Subtítulos*/
-  .perfil h2,
+  .perf h2,
   .repositorios h2,
   .carrosel h2,
   .colegas h2 {
