@@ -1,205 +1,392 @@
-/* reset styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* resetando a página*/
 * {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 1em;
+  font-size: 1em;
 }
 
-html, body {
-    height: 100%;
-    background-color: #333;
+html,
+body {
+  height: 100%;
+  background-color: #333;
+  font-family: var(--fonte-padrao);
 }
 
+/*variaveis*/
 :root {
-    --cor0: #20d7d6;
-    --cor1: #3f949c;
-    --cor2: #767374;
-    --cor3: #9e978d;
-    --cor4: #2e3132;
-    --fonte-padrao: 'Inter', sans-serif;
+  --cor0: #20d7d6;
+  --cor1: #3f949c;
+  --cor2: white;
+  --cor3: #9e978d;
+  --cor4: #2e3132;
+  --fonte-padrao: 'Inter', sans-serif;
 }
 
-/* header styles */
+/*header*/
 .cabecalho {
-    color: #fff; /* cor do texto */
-    padding: 20px; /* espaço interno */
-    display: flex; /* usar flexbox */
-    justify-content: space-between; /* alinhar itens */
+  color: var(--cor2);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* Estilos para o logotipo */
 .logo {
-    color: #fff; /* cor do texto */
-    text-decoration: none; /* remover sublinhado */
-    border: 2px solid var(--cor0); /* adicionar borda */
-    padding: 5px 10px; /* espaço interno */
-    border-radius: 5px; /* borda arredondada */
-    margin-left: 40px;
+  color: var(--cor2);
+  text-decoration: none;
+  border: 2px solid var(--cor0);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 40px;
 }
 
-/* Estilos para o menu */
+.logo:hover {
+  color: var(--cor1);
+}
+
+.logo:active {
+  color: var(--cor1);
+}
+
 .menu {
-    list-style-type: none; /* remover marcadores de lista */
-    display: flex; /* usar flexbox */
-    align-items: center; /* centralizar itens verticalmente */
+  list-style-type: none;
+  display: flex;
+  align-items: center;
 }
 
 .cabecalho .menu li {
-    margin-left: 20px;
-    margin-right: 40px; 
-    font-size: 27px;/* espaço entre os itens */
+  margin-left: 20px;
+  margin-right: 40px;
+  font-size: 27px;
 }
 
 .cabecalho .menu li a:hover {
-    color: var(--cor0); /* muda a cor do texto ao passar o mouse */
+  color: var(--cor0);
 }
 
 .cabecalho .menu li a {
-    color: #fff; /* cor do texto */
-    text-decoration: none; /* remover sublinhado */
+  color: var(--cor2);
+  text-decoration: none;
 }
 
-.menu {
-    list-style-type: none;
-  }
-  
-  .menu li {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  
-  
-  .menu li a {
-    color: #fff;
-    text-decoration: none;
-    vertical-align: middle;
-  }
-
-
-  .perfil {
-    display: flex;
-    justify-content: space-between;
-    color: white; /* Adicionado para garantir que o texto seja branco */
-  }
-  
-  .imagem-texto {
-    display: flex;
-    align-items: center; /* Adicionado para centralizar verticalmente */
-  }
-  
-  .imagem-texto img {
-    margin-right: 20px;
-    border-radius: 10px;
-    width: 250px;
-    height: 250px;
-    margin-left: 70px;
-  }
-  
-  .texto {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .localizacao-email {
-    margin-bottom: 10px; /* Adicionado espaçamento entre localização/e-mail e redes sociais */
-  }
-  
-  .redes-sociais {
-    display: flex;
-    margin-top: 10px; /* Espaçamento entre os ícones das redes sociais */
-  }
-  
-  .redes-sociais i {
-    font-size: 24px; /* Ajuste do tamanho dos ícones das redes sociais */
-    margin-right: 10px; /* Espaçamento entre os ícones das redes sociais */
-  }
-  
-  .numero-redes {
-    display: flex;
-    align-items: center;
-    margin-top: 10px; /* Espaçamento entre o número de redes e o strong "Localização" */
-    font-size: 24px; /* Ajuste do tamanho do número de redes */
-    position: relative; /* Adicionado para posicionar o ícone de forma relativa */
-  }
-  
-  .numero-redes i {
-    font-size: 18px; /* Ajuste do tamanho do ícone para 18px */
-    margin-right: 10px; /* Espaçamento entre os ícones das redes sociais */
-    left: 60px;}
-  
-.conteudo h2{
-    margin-top: 30px;
-    margin-left: 70px;
+.menu li {
+  display: inline-block;
+  margin-left: 20px;
 }
-.conteudo hr{
-    margin-left: 70px;
-    color: var(--cor0);
 
+.menu li a {
+  color: var(--cor2);
+  text-decoration: none;
+  vertical-align: middle;
 }
 
 
+/*Main*/
 
-.repositorios h2{
-    margin-top: 30px;
-    margin-left: 70px;
-    color: white;
+/*Perfil*/
+.perfil {
+  display: flex;
+  justify-content: space-between;
+  color: var(--cor2);
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-.repositorios hr{
-    margin-left: 70px;
-    color: var(--cor0);
-    margin-right: 70px;
+.perfil hr {
+  margin-left: 20px;
+  color: var(--cor0);
+  margin-right: 20px;
+}
+
+.imagem-texto {
+  display: flex;
+  align-items: center;
+}
+
+.imagem-texto img {
+  margin-right: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.texto {
+  text-align: justify;
+  margin-right: 30px;
+}
+
+.texto h3 {
+  color: var(--cor0);
+}
+
+.redes-sociais {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.redes-sociais i {
+  color: var(--cor2);
+  font-size: 24px;
+  margin: 5px;
+}
+
+.redes-sociais i:hover {
+  color: var(--cor1);
+}
+
+.numero-redes {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 24px;
+  position: relative;
+}
+
+.numero-redes i {
+  font-size: 18px;
+  margin-right: 10px;
+  left: 60px;
+}
+
+.perfil h2 {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.perfil hr {
+  margin-left: 20px;
+  color: var(--cor0);
+}
+
+/*Repositório*/
+.repositorios h2 {
+  margin-top: 30px;
+  margin-left: 20px;
+  color: var(--cor2);
+}
+
+.repositorios hr {
+  margin-left: 20px;
+  color: var(--cor0);
+  margin-right: 20px;
 }
 
 .icones {
-    display: flex;
-    align-items: center; /* Isso centralizará os elementos verticalmente */
-  }
-  
-  
+  display: flex;
+  align-items: center;
+}
 
-.cardss{
-    margin-left: 70px;
-    margin-right: 70px;
+.repositorios {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.cardss {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/*Conteúdo Sugerido*/
+.carrosel {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.carrosel h2 {
+  margin-top: 30px;
+  margin-left: 20px;
+  color: var(--cor2);
+}
+
+.carrosel hr {
+  margin-left: 20px;
+  color: var(--cor0);
+  margin-right: 20px;
+}
+
+.imagens {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+/*Colegas de trabalho*/
+.colegas {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.colegas h2 {
+  margin-top: 30px;
+  margin-left: 20px;
+  color: var(--cor2);
+}
+
+.colegas hr {
+  margin-left: 20px;
+  color: var(--cor0);
+  margin-right: 20px;
+}
+
+.trabalho {
+  text-align: center;
+}
+
+.colega {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  margin-left: 30px;
+}
+
+.colega h3 a {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--cor2);
+}
+
+.colega h3 a:hover {
+  color: var(--cor0);
+}
+
+.colega img {
+  border-radius: 10px;
+}
+
+/*Rodapé*/
+.rodape p {
+  text-align: center;
+  color: var(--cor2);
+}
+
+.rodape hr {
+  margin-left: 20px;
+  color: var(--cor0);
+  margin-right: 20px;
 }
 
 
+/* Adicione estas regras de mídia ao final do seu CSS */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* Estilos para telas menores */
+/* Estilos para dispositivos com largura até 768px (tablet e dispositivos móveis) */
 @media screen and (max-width: 768px) {
-    .cabecalho {
-        flex-direction: column; /* empilhar os elementos em coluna */
-        align-items: center; /* centralizar itens horizontalmente */
-    }
 
-    .cabecalho .menu {
-        margin-top: 20px; /* espaço entre o logotipo e o menu */
-    }
+  /*header*/
+  .cabecalho {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .cabecalho .menu li {
-        margin: 10px 0; /* espaço entre os itens do menu */
-        font-size: 18px; /* reduzir o tamanho da fonte */
-    }
+  .logo {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .logo:active {
+    color: var(--cor1);
+    /* Cor que deseja quando clicar */
+  }
+
+
+  .menu ul {
+    display: none;
+  }
+
+  /*Main*/
+
+  /*Perfil*/
+  .perfil .imagem-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .imagem-texto img {
+    margin-top: 10px;
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .perfil hr {
+    width: 100%;
+    margin: 0;
+  }
+
+  .redes-sociais i:hover {
+    color: var(--cor1);
+    /* Nova cor ao passar o mouse */
+  }
+
+  .redes-sociais {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .redes-sociais i:hover {
+    color: var(--cor1);
+    /* Nova cor ao passar o mouse */
+  }
+
+  /*Repositório*/
+  .cardss {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /*Colegas de trabalho*/
+  .colegas {
+    text-align: center;
+  }
+
+  .colega {
+    margin: 10px auto;
+    margin-right: 15px;
+    text-align: center;
+  }
+
+  .colega h3 a:hover {
+    color: var(--cor0);
+
+  }
+
+  /*Subtítulos*/
+  .perfil h2,
+  .repositorios h2,
+  .carrosel h2,
+  .colegas h2 {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  /*Linha*/
+  .carrosel hr,
+  .repositorios hr,
+  .colegas hr,
+  .rodape hr {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
