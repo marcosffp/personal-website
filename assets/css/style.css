@@ -45,6 +45,7 @@ body {
   padding: 5px 10px;
   border-radius: 5px;
   margin-left: 40px;
+  white-space: nowrap;
 }
 
 .logo:hover {
@@ -401,6 +402,11 @@ body {
   .colega h3 a:hover {
     color: var(--cor0);
   }
+
+  /*carrosel*/
+  .carousel-inner img {
+    width: 100%;
+    height: auto;
 
   /*Subtítulos*/
   .perf h2,
