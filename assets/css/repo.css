@@ -214,16 +214,37 @@ body {
 }
 
 /* Mídia para dispositivos móveis */
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
+    /*header*/
     .cabecalho {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
+    .logo {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  
     .menu {
-        margin-top: 20px;
+      list-style-type: none;
+      margin-top: 10px;
     }
-
+  
+    .menu li {
+      display: block;
+      margin-left: 0;
+    }
+  
+    .menu li a {
+      display: block;
+      padding: 10px 0;
+      text-align: center; 
+    }
+  
+    .menu li a:hover {
+      color: var(--cor0);
+    }
     .cabecalho .menu li {
         margin: 10px;
         font-size: 20px;

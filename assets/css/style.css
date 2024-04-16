@@ -295,11 +295,9 @@ body {
 }
 
 
-/* Adicione estas regras de mídia ao final do seu CSS */
 
-  /* Estilos para telas menores */
 /* Estilos para dispositivos com largura até 768px (tablet e dispositivos móveis) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
   /*header*/
   .cabecalho {
     flex-direction: column;
@@ -309,10 +307,6 @@ body {
   .logo {
     margin-left: 0;
     margin-bottom: 20px;
-  }
-
-  .menu ul {
-    display: none;
   }
 
   .menu {
@@ -328,12 +322,12 @@ body {
   .menu li a {
     display: block;
     padding: 10px 0;
+    text-align: center; 
   }
 
   .menu li a:hover {
     color: var(--cor0);
   }
-
   /*Perfil*/
   .perf h2 {
     text-align: center;
@@ -407,7 +401,7 @@ body {
   .carousel-inner img {
     width: 100%;
     height: auto;
-
+  }
   /*Subtítulos*/
   .perf h2,
   .repositorios h2,
